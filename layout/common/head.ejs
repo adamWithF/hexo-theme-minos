@@ -16,9 +16,13 @@
     <%- open_graph({
         twitter_id: get_config('open_graph.twitter_id', ''),
         twitter_site: get_config('open_graph.twitter_site', ''),
+        twitter_card: get_config('open_graph.twitter_card', ''),
         google_plus: get_config('open_graph.google_plus', ''),
         fb_admins: get_config('open_graph.fb_admins', ''),
-        fb_app_id: get_config('open_graph.fb_app_id', '')
+        fb_app_id: get_config('open_graph.fb_app_id', ''),
+        url: get_config('open_graph.url', ''),
+        type: get_config('open_graph.type', ''),
+
     }) %>
 <% } %>
 
@@ -38,7 +42,9 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 <% } %>
 
+
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/<%= get_config('article.highlight', 'atom-one-light') %>.min.css">
+
 
 <%- css('css/style') %>
 

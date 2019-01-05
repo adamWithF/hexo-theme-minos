@@ -23,6 +23,23 @@ a.tag.article-tag {
     }
 }
 
+.navbar-menu {
+  text-align: center;
+}
+
+.navbar-item {
+  text-align: center;
+
+  &.social-media {
+    display: inline-block;
+  }
+}
+
+i.fab,
+.svg-inline--fa.fa-w-16 {
+  font-size: 25px
+}
+
 .navbar-main {
     border-bottom: 1px solid $border-color;
     transition: 0.1s ease-in;
@@ -30,10 +47,6 @@ a.tag.article-tag {
     .navbar-logo {
         font-size: 1.5rem;
         font-weight: 600;
-    }
-
-    .navbar-item {
-        text-align: center;
     }
 
     a.navbar-item.is-active {
