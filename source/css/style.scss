@@ -1,11 +1,21 @@
-$family-serif: "Ovo", "Georgia", "STZhongsong", "Microsoft YaHei", serif;
-$family-mono: "Source Code Pro", monospace, "Microsoft YaHei";
-$border-color: #dbdbdb;
+@import "variables";
+@import "utils";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: initial;
+}
+
+body {
+  width: 100%;
+}
 
 body, button, input, select, textarea {
     font-family: $family-serif;
 }
-
 
 a.tag.article-tag {
     font-size: 0.9rem;
@@ -32,6 +42,10 @@ a.tag.article-tag {
 
   &.social-media {
     display: inline-block;
+
+    @include media($tablet) {
+      display: flex;
+    }
   }
 }
 
@@ -268,6 +282,10 @@ i.fab,
         }
 
         footer {
+          @include media($tablet) {
+
+          }
+
             cite {
                 font-style: normal;
 

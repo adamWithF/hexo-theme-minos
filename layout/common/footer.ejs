@@ -19,14 +19,17 @@
       </div>
     <% } %>
 
-    <div class="columns is-mobile <%= has_config('footer_links') ? '' : 'content' %>">
-      <div class="column is-narrow">
-        &copy; <%= date(new Date(), 'YYYY') %> <%= get_config('author') || get_config('title') %>&nbsp; All Rights Reserved.
+    <div class="level <%= has_config('footer_links') ? '' : 'content' %>">
+      <div class="level-left">
+        <div class="level-item">
+          &copy; <%= date(new Date(), 'YYYY') %> <%= get_config('author') || get_config('title') %>.&nbsp; All Rights Reserved.
+        </div>
       </div>
       <%- partial('common/languages') %>
-
-      <div class="column is-offset-7">
-        Powered by ❤️
+      <div class="level-right">
+        <div class="level-item">
+          Powered by ❤️
+        </div>
       </div>
     </div>
   </div>
