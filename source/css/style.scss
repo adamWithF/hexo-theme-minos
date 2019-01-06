@@ -43,7 +43,7 @@ a.tag.article-tag {
   &.social-media {
     display: inline-block;
 
-    @include media($tablet) {
+    @include media($laptop) {
       display: flex;
     }
   }
