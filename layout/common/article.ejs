@@ -22,9 +22,14 @@
         <span class="column is-narrow">
             <% let words = word_count(post._content); %>
             <% let time = duration((words / 150.0) * 60, 'seconds') %>
-            <%= `${ time.humanize() } ${ __('article.read')} (${ __('article.about') } ${ words } ${ __('article.words') })` %>
+            <%= `(${ time.humanize() } ${ __('article.read')})` %>
         </span>
         <% } %>
+    </div>
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+      <% (post._tags || post.tags).forEach(tag => { %>
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="<%- url_for(tag.path) %>">#<%= tag.name %></a></span>
+      <% }) %>
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     <% if (post.excerpt && index){ %>
