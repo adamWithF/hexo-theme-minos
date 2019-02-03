@@ -1,4 +1,4 @@
-<% if (!head && !(has_config('plugins.clipboard') && get_config('plugins.clipboard') === false)) { %>
+<% if (get_config('plugins.clipboard')) { %>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
     <style>
         .hljs {
