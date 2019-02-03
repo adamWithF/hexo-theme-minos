@@ -51,7 +51,7 @@ plugins:
   gallery: false
   clipboard: false
   google-analytics:
-    tracking_id:
+    tracking_id: UA-133736567-1
 
 # Additional navigation bar links on the right.
 # Links can either be text or icon. The following link is set to be an icon link whose icon
