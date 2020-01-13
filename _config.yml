@@ -20,7 +20,7 @@ logo: images/freedom_samurai_logo.jpg
 
 article:
   # Show word count and estimated reading time.
-  readtime: true
+  readtime: false
   # Code highlight theme, please see https://highlightjs.org/static/demo/
   highlight: atom-one-light
 
