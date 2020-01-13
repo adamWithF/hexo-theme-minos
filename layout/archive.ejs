@@ -15,11 +15,13 @@
         <div class="archive content">
             <h4 class="title is-4" id="<%= year %>"><%= year %></h4>
             <div class="articles">
-            <% for (let post of groups[year].sort((a, b) => b.date.diff(a.date))) { %>
+              <% for (let post of groups[year].sort((a, b) => b.date.diff(a.date))) { %>
                 <div class="article content>">
+                  <% if (config.showPostDate) { %>
                     <time class="is-text-small" datetime="<%= date_xml(post.date) %>" itemprop="datePublished">
-                        <%= format_date(post.date) %></time>
-                    <h6 class="title is-6"><a href="<%= url_for(post.link ? post.link : post.path) %>"><%= post.title %></a></h6>
+                      <%= format_date(post.date) %></time>
+                  <% } %>
+                  <h6 class="title is-6"><a href="<%= url_for(post.link ? post.link : post.path) %>"><%= post.title %></a></h6>
                 </div>
             <% } %>
             </div>
